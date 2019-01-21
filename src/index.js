@@ -73,3 +73,23 @@ $(document).on('click touchend','.nav-toggle-button',function(e){
     $('#nav').toggleClass('--active');
   }
 });
+
+// function tablePagination(element){
+//   var theTable = $(element);
+//   var row = theTable.find('tbody tr');
+//   var rowLength = row.length;
+//   if(rowLength>10){
+//     theTable.after('<ul class="justify-content-center pagination '+element.replace(/[\s\W]/g, '')+'-pagination"></ul>');
+//     //直接選會選不到
+//     var pagination = theTable.next();
+//     appendPaginationButton(pagination,rowLength);
+//   }
+// }
+// function appendPaginationButton(element,index){
+//   element.append('<li class="page-item"><a class="page-link" href="#" aria-label="上一頁" data-page="prev"><span aria-hidden="true">&laquo;</span></a></li>');
+//   for(var i=1;i<=Math.ceil(index/10);i++){
+//     element.append('<li class="page-item"><a class="page-link" href="#" data-page="'+i+'">'+i+'</a></li>');
+//   }
+//   element.append('<li class="page-item"><a class="page-link" href="#" aria-label="下一頁" data-page="next"><span aria-hidden="true">&raquo;</span></a></li>');
+// }
+// tablePagination('#mytable');

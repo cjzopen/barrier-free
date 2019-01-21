@@ -27,6 +27,9 @@ a:focus{
   color: $_black;
   content: ">";
 }
+.keyword_list{
+  list-style-position: inside;
+}
 
 $color-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-light, -brown-lighten: $_brown-lighten, -brown-button: $_brown-button-active, -white: $_white, -black: $_black );
 :root{
@@ -153,6 +156,42 @@ main{
   background-image: url(https://picsum.photos/400/300/?random);
   background-size: cover;
   background-repeat: no-repeat;
+}
+.table-striped{
+  tbody tr:nth-of-type(odd) {
+    background-color: $_white;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: $_brown-lighten;
+  }
+}
+table.table-brown{
+  thead{
+    background-color: $_brown;
+    color:$_white;
+    th,td{
+      border-top:none;
+      border-bottom:none;
+      border-left:1px solid $_white;
+      border-right:1px solid $_white;
+    }
+  }
+}
+.page-item.active .page-link{
+  background-color: $_brown;
+  border-color:$_brown;
+}
+.page-link{
+  color:$_brown;
+  &:focus{
+    box-shadow: 0 0 .5rem 0.2rem $_brown;
+  }
+}
+.all_footer{
+  a:focus{
+    color:$_white;
+    outline-color:$_white;
+  }
 }
 @media (min-width: 576px){
   .container {
