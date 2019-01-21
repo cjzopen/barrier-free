@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>議事暨公報管理系統</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="dist/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="all">
+  <a class="w-100 text-center skip-link" href="#main-content"><span>Skip to content</span></a>
+  <header class="all_header">
+    <div class="container">
+      <div class="row align-items-center justify-content-lg-between header_top">
+        <div class="flex-shrink-0 px-3 py-1 d-lg-none"><a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-bars"></i></a></div>
+        <div class="flex-shrink-0 flex-fill text-center text-lg-left px-3 py-1">
+          <img src="https://picsum.photos/200/72/?random" alt="議事暨公報管理系統" class="img-fluid all_header_logo">
+          <a title="快速鍵h-上方功能連結區" href="#top-area" accesskey="h" id="top-area">:::</a>
+        </div>
+        <div class="px-3 py-1 d-none d-lg-block">
+          <small>本網站僅提供89卷50期後之資料，89卷50期以前請至國會圖書館進行查詢</small>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-brown-light">
+      <nav id="nav" aria-label="主選單">
+        <ul class="row justify-content-center mb-0">
+          <li id="nav_inner_toggle_button" class="align-items-center px-3">
+            <a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-times"></i></a>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">公報類</a>
+            <div class="slidedown-menu">
+              <a class="slidedown-item" href="#aa">公報</a>
+            </div>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">議事類</a>
+            <div class="slidedown-menu">
+              <a class="slidedown-item" href="#">議事日程</a>
+              <a class="slidedown-item" href="#">議事錄</a>
+            </div>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="#">最新議事日程</a>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="#">國是論壇</a>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">相關連結</a>
+            <div class="slidedown-menu">
+              <a class="slidedown-item" href="https://www.president.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">總統府公報</a>
+              <a class="slidedown-item" href="#" target="_blank" rel="external noopener" title="另開新視窗">行政院公報</a>
+              <a class="slidedown-item" href="https://misq.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">議案整合暨綜合查詢</a>
+              <a class="slidedown-item" href="https://ivod.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">多媒體隨選視訊系統</a>
+              <a class="slidedown-item" href="https://lis.ly.gov.tw/lygazettec/gazettetp" target="_blank" rel="external noopener" title="另開新視窗">國會圖書館</a>
+            </div>
+          </li>
+          <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">立法院審議議案程序圖</a>
+            <div class="slidedown-menu">
+              <a class="slidedown-item" href="#">法律案、預算案、條約案</a>
+              <a class="slidedown-item" href="#">緊急命令追認案、行使同意權、覆議案、彈劾案、罷免案、不信任案</a>
+              <a class="slidedown-item" href="#">其他議案</a>
+              <a class="slidedown-item" href="#">完成委員會審查之議案列入院會流程圖</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div aria-label="breadcrumb">
+      <ol class="breadcrumb container mb-0">
+        <li class="breadcrumb-item"><i class="fas fa-home" aria-hidden="true"></i> Home</li>
+        <li class="breadcrumb-item active" aria-current="page">公報</li>
+      </ol>
+    </div>
+    <section class="container bg-white">
+      <a href="#main-content" id="main-content" accesskey="c" title="中間主要內容區，此區塊呈現網頁的主要內容">:::</a>
+      <div>
+        <a class="btn btn-brown my-2 mr-2" href="">公報檢索</a>
+        <a class="btn btn-brown my-2 mr-2" href="">公報查閱</a>
+      </div>
+      <div>
+        <label for="">全文檢索關鍵字：</label>
+        <input type="text">
+        <input type="button" class="btn btn-brown my-2 mr-2" value="查詢">
+        <input type="button" class="btn btn-brown-light my-2 mr-2" value="議案進度查詢">
+        <input type="button" class="btn btn-brown-light my-2 mr-2" value="進階查詢">
+      </div>
+      
+    </section>
+  </main>
+  <footer class="bg-brown-dark color-white">
+    <div class="container">footer</div>
+  </footer>
+  <div id="num">3452455642</div>
+  <button class="btn btn-brown">f</button>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
+<script src="dist/bundle.js"></script>
+</body>
+</html>
