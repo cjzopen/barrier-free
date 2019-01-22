@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="dist/css/datatables.bs4.min.css" />
   <link rel="stylesheet" href="dist/css/style.css" />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <div id="all">
-  <a class="w-100 text-center skip-link" href="#main-content"><span>Skip to content</span></a>
+  <a class="w-100 text-center skip-link" href="#main-content"><span>跳到主要內容區塊</span></a>
   <header class="all_header">
     <div class="container">
       <div class="row align-items-center justify-content-lg-between header_top">
@@ -47,19 +47,19 @@
             </div>
           </li>
           <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
-            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="#">最新議事日程</a>
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="https://www.google.com.tw">最新議事日程</a>
           </li>
           <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
-            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="#">國是論壇</a>
+            <a class="px-3 px-lg-4 py-3 d-block slidedown-title" href="https://www.google.com.tw">國是論壇</a>
           </li>
           <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
             <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">相關連結</a>
             <div class="slidedown-menu">
-              <a class="slidedown-item" href="https://www.president.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">總統府公報</a>
-              <a class="slidedown-item" href="#" target="_blank" rel="external noopener" title="另開新視窗">行政院公報</a>
-              <a class="slidedown-item" href="https://misq.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">議案整合暨綜合查詢</a>
-              <a class="slidedown-item" href="https://ivod.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗">多媒體隨選視訊系統</a>
-              <a class="slidedown-item" href="https://lis.ly.gov.tw/lygazettec/gazettetp" target="_blank" rel="external noopener" title="另開新視窗">國會圖書館</a>
+              <a class="slidedown-item" href="https://www.president.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗"><span class="d-block">總統府公報</span></a>
+              <a class="slidedown-item" href="#" target="_blank" rel="external noopener" title="另開新視窗"><span>行政院公報</span></a>
+              <a class="slidedown-item" href="https://misq.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗"><span>議案整合暨綜合查詢</span></a>
+              <a class="slidedown-item" href="https://ivod.ly.gov.tw/" target="_blank" rel="external noopener" title="另開新視窗"><span>多媒體隨選視訊系統</span></a>
+              <a class="slidedown-item" href="https://lis.ly.gov.tw/lygazettec/gazettetp" target="_blank" rel="external noopener" title="另開新視窗"><span>國會圖書館</span></a>
             </div>
           </li>
           <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
@@ -106,36 +106,27 @@
       <table class="table table-striped table-brown" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
         <thead>
           <tr role="row" class="bg-brown">
-            <th></th>
-            <th class="d-none d-lg-table-cell">卷</th>
-            <th class="d-none d-lg-table-cell">期(出版總號)</th>
-            <th class="d-none d-lg-table-cell">冊別</th>
-            <th>卷、期、冊別</th>
-            <th>出版日期</th>
-            <th>PDF檔案連結</th>
+            <th scope="col"></th>
+            <th scope="col" class="d-none d-lg-table-cell">卷</th>
+            <th scope="col" class="d-none d-lg-table-cell">期(出版總號)</th>
+            <th scope="col" class="d-none d-lg-table-cell">冊別</th>
+            <th scope="col">卷、期、冊別</th>
+            <th scope="col">出版日期</th>
+            <th scope="col">PDF檔案連結</th>
           </tr>
         </thead>
         <tbody>
           <tr role="row">
-            <td>1</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td><a href="#" class="border border-danger rounded text-danger px-2">PDF</a></td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">1</a></td>
+            <td class="d-none d-lg-table-cell">108</td>
+            <td class="d-none d-lg-table-cell">02(4645)</td>
+            <td class="d-none d-lg-table-cell">下</td>
+            <td>立法院第108卷第02期 (4645)公報 下 冊</td>
+            <td>108/01/17</td>
+            <td><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a></td>
           </tr>
           <tr role="row">
-            <td>2</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
-          </tr>
-          <tr role="row">
-            <td>3</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">2</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -144,7 +135,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>4</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">3</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -153,7 +144,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>5</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">4</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -162,7 +153,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>6</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">5</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -171,7 +162,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>7</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">6</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -180,7 +171,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>8</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">7</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -189,7 +180,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>9</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">8</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -198,7 +189,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>10</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">9</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -207,7 +198,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>11</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">10</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -216,7 +207,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>12</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">11</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -225,7 +216,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>13</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">12</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -234,7 +225,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>14</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">13</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -243,7 +234,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>15</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">14</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -252,7 +243,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>16</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">15</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -261,7 +252,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>17</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">16</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -270,7 +261,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>18</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">17</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -279,7 +270,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>19</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">18</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -288,7 +279,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>20</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">19</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -297,7 +288,7 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>21</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">20</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -306,7 +297,16 @@
             <td>####</td>
           </tr>
           <tr role="row">
-            <td>22</td>
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">21</a></td>
+            <td class="d-none d-lg-table-cell">####</td>
+            <td class="d-none d-lg-table-cell">####</td>
+            <td class="d-none d-lg-table-cell">####</td>
+            <td>####</td>
+            <td>####</td>
+            <td>####</td>
+          </tr>
+          <tr role="row">
+            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">22</a></td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
             <td class="d-none d-lg-table-cell">####</td>
@@ -326,18 +326,18 @@
           <img class="img-fluid" src="https://picsum.photos/80/80/?random" alt="立法院logo">
           <ul class="list-unstyled">
             <li>立法院本部　地址：10051 台北市中正區中山南路1號 / 電話總機：(02)23585858</li>
-            <li>立法院中部辦公室 地址：41341 台中市霧峰區中正路734號</li>
-            <li>Copyright © 2012 立法院版權所有</li>
+            <li>立法院中部辦公室　地址：41341 台中市霧峰區中正路734號</li>
+            <li>Copyright &copy; 2012 立法院版權所有</li>
           </ul>
         </div>
         <div>
           <div>
             <a href="#"><img class="img-fluid" src="https://picsum.photos/120/40/?random" alt="無障礙標章"></a>
-            瀏覽人次：<span id="num">3452455642</span>
+            <label for="">瀏覽人次：<span id="num">3452455642</span></label>
           </div>
-          <ul class="list-unstyled text-lg-right">
+          <ul class="list-unstyled text-lg-right mb-0 mt-3">
             <li class="d-inline-block border-left border-white px-3"><a class="color-white" href="#資訊安全政策">資訊安全政策</a></li>
-            <li class="d-inline-block border-left border-white px-3"><a class="color-white" href="#">隱私權政策</a></li>
+            <li class="d-inline-block border-left border-white px-3"><a class="color-white" href="#隱私權政策">隱私權政策</a></li>
           </ul>
         </div>
       </div>
@@ -347,8 +347,8 @@
 <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="dist/jquery.datatables.min.js"></script>
+<script src="dist/datatables.bootstrap4.min.js"></script>
 <script src="dist/bundle.js"></script>
 <script>
 (function(){

@@ -6,6 +6,7 @@ $_brown-button-active:#ffddbc;
 $_white:#fff;
 $_black:#424242;
 
+
 body{
   font-size: 16px;
   color:$_black;
@@ -98,6 +99,13 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
   li{
     list-style: none;
   }
+  a{
+    position: relative;
+    // resolve <a> disply block can't click in ie
+    &>span{
+      position: relative;
+    }
+  }
 }
 .slidedown-title{
   &[data-toggle="slidedown"]::after{
@@ -115,6 +123,7 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
     width: calc(100% - 1px);
     box-shadow:0 0 0 1px $_brown-light;
     background-color: $_brown;
+    z-index: 1000;
   }
   &.slidedown--active,&:focus{
     background-color: $_white;
@@ -164,6 +173,12 @@ main{
   tbody tr:nth-of-type(even) {
     background-color: $_brown-lighten;
   }
+}
+// .table-hover tbody tr:hover {
+//   background-color: rgba(0,0,0,.075);
+// }
+.table tbody tr.--active {
+  background-color: rgba(0,0,0,.075);
 }
 table.table-brown{
   thead{

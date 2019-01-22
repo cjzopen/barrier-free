@@ -1,4 +1,4 @@
-const fullname = (lastname, firstname) => lastname + ',' + firstname;
+// const fullname = (lastname, firstname) => lastname + ',' + firstname;
 
 const formatNumber = (num, separator) => {
   let parts;
@@ -15,4 +15,4 @@ const isTouchDevice = () => {
   return 'ontouchstart' in window || navigator.maxTouchPoints;
 };
 
-export {fullname,formatNumber,isTouchDevice};
+export {formatNumber,isTouchDevice};
