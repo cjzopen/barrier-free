@@ -1,6 +1,10 @@
 // const fullname = (lastname, firstname) => lastname + ',' + firstname;
 
-const formatNumber = (num, separator) => {
+// var viewWidth = ()=>{
+//   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+// }
+
+const addCommaEvery3Digits = (num, separator) => {
   let parts;
   if (!isNaN(parseFloat(num)) && isFinite(num)) {
     num = Number(num);
@@ -15,4 +19,4 @@ const isTouchDevice = () => {
   return 'ontouchstart' in window || navigator.maxTouchPoints;
 };
 
-export {formatNumber,isTouchDevice};
+export {addCommaEvery3Digits,isTouchDevice};

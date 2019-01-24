@@ -1,18 +1,10 @@
-// import fullname from './fullname';
 // import formatNumber from './format-number';
 import * as theFn from './function.js'
 // import './test.scss';
 
-var viewWidth = ()=>{
-  return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-}
-// $(window).on('resize',()=>{
-//   console.log(viewWidth())
-// })
 
-// number add ',' in #num element
-const numElement = document.querySelector('#num');
-var j = theFn.formatNumber(numElement.innerHTML);
+const numElement = document.querySelector('#visit-times');
+var j = theFn.addCommaEvery3Digits(numElement.innerHTML);
 numElement.innerHTML = j;
 
 // #nav menu
@@ -27,7 +19,7 @@ $(document).on('click','.slidedown-title',function(e){
   }
 });
 $(document).on('focus','.slidedown-title',function(e){
-  var _this = $(this);
+  let _this = $(this);
   _this.addClass('slidedown--active');
   _this.closest('[data-slidedown]').siblings().find('.slidedown-title').removeClass('slidedown--active');
   $(document).on('blur','[data-slidedown]:last .slidedown-item:last',function(){
@@ -48,7 +40,7 @@ $(document).on('click',':not(#nav *)',function(e){
 });
 if(!theFn.isTouchDevice()){
   $(document).on('mouseenter','[data-slidedown]',function(e){
-    var _this = $(this);
+    let _this = $(this);
     // _this.find('.slidedown-title').addClass('slidedown--active');
     // _this.siblings().find('.slidedown-title').removeClass('slidedown--active');
     _this.find('.slidedown-title').trigger('focus');
@@ -81,6 +73,17 @@ $(document).on('focus','.table tbody tr a',function(){
   $(this).closest('tr').addClass('--active');
 });
 
+
+$(document).on('click','.summary',function(e){
+  e.preventDefault();
+  let _this = $(this);
+  var group = _this.attr('data-slide');
+  var detail = _this.next();
+  if(group){
+    detail = $('.detail[data-slide="'+group+'"]');
+  }
+  detail.slideToggle(200);
+});
 // function tablePagination(element){
 //   var theTable = $(element);
 //   var row = theTable.find('tbody tr');

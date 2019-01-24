@@ -205,7 +205,8 @@ table.table-brown{
 .page-link{
   color:$_brown;
   &:focus{
-    box-shadow: 0 0 .5rem 0.2rem $_brown;
+    box-shadow: none;
+    border-color:$_brown;
   }
 }
 .all_footer{
