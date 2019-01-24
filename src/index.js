@@ -65,11 +65,16 @@ $(document).on('click touchend','.nav-toggle-button',function(e){
     triggerFlag = true;
     setTimeout(()=>{ triggerFlag = false; }, triggerThreshold);
     $('#nav').toggleClass('--active');
+    $('body,html').toggleClass('overflow-hidden');
   }
+});
+$(window).on('resize',()=>{
+  $('#nav').removeClass('--active');
+  $('body,html').removeClass('overflow-hidden');
 });
 
 
-$(document).on('focus','.table tbody tr a',function(e){
+$(document).on('focus','.table tbody tr a',function(){
   $(document).on('blur','.table tbody tr a',function(){
     $(this).closest('tr').removeClass('--active');
   });

@@ -71,6 +71,12 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
     }
   }
 }
+.datepicker--cell.-selected-{
+  background:$_brown-light;
+  &.-focus-{
+    background:$_brown;
+  }
+}
 .skip-link{
   display: block;
   overflow: hidden;
@@ -266,6 +272,11 @@ table.table-brown{
   }
   [data-toggle="slidedown"]+.slidedown-menu{
     position: static;
+  }
+}
+@media (max-width: 767px){
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination{
+    justify-content: center;
   }
 }
 

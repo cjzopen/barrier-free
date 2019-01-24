@@ -8,11 +8,14 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="dist/css/datatables.bs4.min.css" />
+  <link rel="stylesheet" href="dist/css/datepicker.css" />
   <link rel="stylesheet" href="dist/css/style.css" />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+<noscript><div class="container h4 text-danger">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</div></noscript>
 <div id="all">
+  <input type="text" id="my-element" placeholder="格式：109/01/01" title="可使用鍵盤方向鍵選取,esc退出">
   <a class="w-100 text-center skip-link" href="#main-content"><span>跳到主要內容區塊</span></a>
   <header class="all_header">
     <div class="container">
@@ -88,7 +91,36 @@
         <a class="btn btn-brown my-2 mr-2" href="">公報檢索</a>
         <a class="btn btn-brown my-2 mr-2" href="">公報查閱</a>
       </div>
-      <div>
+      <form>
+        <div class="d-sm-table">
+          <div class="d-sm-table-row">
+            <div class="d-sm-table-cell text-sm-right text-nowrap">
+              <label class="mb-0" for="">全文檢索關鍵字：</label>
+            </div>
+            <div class="d-sm-table-cell">
+              <input type="text">
+              <input type="button" class="btn btn-brown my-2 mr-2" value="查詢">
+              <input type="button" class="btn btn-brown-light my-2 mr-2" value="議案進度查詢">
+              <input type="button" class="btn btn-brown-light my-2 mr-2" value="進階查詢">
+            </div>
+          </div>
+          <div class="d-sm-table-row">
+            <div class="d-sm-table-cell text-sm-right text-nowrap">
+              <span>熱門關鍵字：</span>
+            </div>
+            <div class="d-sm-table-cell">
+              <ol class="d-flex flex-wrap pl-0 keyword_list">
+                <li class="text-nowrap"><a href="">經濟委員會</a></li>
+                <li class="text-nowrap"><a href="">經濟委員會</a></li>
+                <li class="text-nowrap"><a href="">經濟委員會</a></li>
+                <li class="text-nowrap"><a href="">經濟委員會</a></li>
+                <li class="text-nowrap"><a href="">經濟委員會</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </form>
+<!--       <div>
         <label for="">全文檢索關鍵字：</label>
         <input type="text">
         <input type="button" class="btn btn-brown my-2 mr-2" value="查詢">
@@ -102,7 +134,7 @@
           <li class="text-nowrap"><a href="">經濟委員會</a></li>
           <li class="text-nowrap"><a href="">經濟委員會</a></li>
         </ol>
-      </div>
+      </div> -->
       <table class="table table-striped table-brown" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
         <thead>
           <tr role="row" class="bg-brown">
@@ -349,8 +381,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
 <script src="dist/jquery.datatables.min.js"></script>
 <script src="dist/datatables.bootstrap4.min.js"></script>
+<script src="dist/datepicker.js"></script>
 <script src="dist/bundle.js"></script>
 <script>
+$('#my-element').datepicker();
 (function(){
   var dataTableSetting = {
     "searching":false,
@@ -361,10 +395,11 @@
     "language": {
       "paginate": {
         "first": "<i class=\"fas fa-angle-double-left\"></i>",
-        "previous":"<",
-        // "next":"<i class=\"fas fa-chevron-right\"></i>",
-        "next":">",
-        "last":"<i class=\"fas fa-angle-double-right\"></i>"
+        "last":"<i class=\"fas fa-angle-double-right\"></i>",
+        // "previous":"<strong><</strong>",
+        // "next":"<strong>></strong>",
+        "previous":"<i class=\"fas fa-chevron-left\"></i>",
+        "next":"<i class=\"fas fa-chevron-right\"></i>",
       },
       aria:{
         paginate: {
