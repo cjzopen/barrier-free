@@ -64,7 +64,7 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
     color:$_white;
     background-color: $item;
     border-color: $item;
-    &:hover,&:active,&:focus,&:focus-within,&-active{
+    &:hover,&:active,&:focus,&:focus-within,&--active{
       background-color: $_brown-button-active;
       border-color: $item;
       color:$_black;
@@ -116,6 +116,8 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
 .slidedown-title{
   &[data-toggle="slidedown"]::after{
     display: inline-block;
+    width: .75rem;
+    text-align: center;
     margin-left: .255em;
     vertical-align: 0;
     content: "+";
@@ -208,6 +210,26 @@ table.table-brown{
     box-shadow: none;
     border-color:$_brown;
   }
+}
+.custom-control-input:checked~.custom-control-label::before {
+  color: $_white;
+  border-color: $_brown;
+  background-color: $_brown;
+}
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+  color: $_white;
+  background-color: $_brown-button-active;
+  border-color: $_brown-button-active;
+}
+.custom-control-input:focus:not(:checked)~.custom-control-label::before {
+  border-color: $_brown;
+}
+.custom-control-input:focus~.custom-control-label::before,.btn.focus, .btn:focus {
+  box-shadow: 0 0 0 0.2rem $_brown-button-active;
+}
+.custom-select:focus {
+  border-color: $_brown;
+  box-shadow: 0 0 0 0.2rem $_brown-button-active;
 }
 .all_footer{
   a:focus{

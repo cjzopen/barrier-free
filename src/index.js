@@ -73,7 +73,7 @@ $(document).on('focus','.table tbody tr a',function(){
   $(this).closest('tr').addClass('--active');
 });
 
-
+$('.detail[data-slide]').hide();
 $(document).on('click','.summary',function(e){
   e.preventDefault();
   let _this = $(this);
