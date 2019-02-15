@@ -1,9 +1,11 @@
 # 套件
 
+* jQuery3.3.1
+
 * [日期選擇器](http://t1m0n.name/air-datepicker/docs/)
 * [table](https://datatables.net/extensions/responsive/examples/styling/bootstrap4.html)
 
-上述操作在 index.html 最下面
+上述2者操作在 index.html 最下面
 
 * [fontawesome](https://fontawesome.com/icons)
 

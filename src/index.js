@@ -1,5 +1,6 @@
 // import formatNumber from './format-number';
-import * as theFn from './function.js'
+import * as theFn from './function.js';
+// import $ from "jquery";
 // import './test.scss';
 
 
