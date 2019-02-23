@@ -19,7 +19,7 @@ body{
   min-height: 100vh;
 }
 a:focus{
-  outline: 2px solid $_brown-dark;
+  outline: 1px dashed #0056b3;
 }
 .breadcrumb{
   background-color:transparent;
@@ -64,12 +64,23 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
     color:$_white;
     background-color: $item;
     border-color: $item;
-    &:hover,&:active,&:focus,&:focus-within,&--active{
+    &:hover,&:active,&:focus,&--active{
+      background-color: $_brown-button-active;
+      border-color: $item;
+      color:$_black;
+    }
+    &:focus-within{
       background-color: $_brown-button-active;
       border-color: $item;
       color:$_black;
     }
   }
+}
+// &:focus-within edge 會整段無視,導致寫在一起的其它東西也無效，所以拉出來另外寫
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: .125rem .5rem;
+  font-size: 1rem;
 }
 .datepicker--cell.-selected-{
   background:$_brown-light;
@@ -136,6 +147,7 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
   &.slidedown--active,&:focus{
     background-color: $_white;
     color:$_black;
+    outline:1px solid $_brown-light;
     &[data-toggle="slidedown"]::after{
       content: "-";
     }
@@ -170,9 +182,11 @@ $btn-list: ( -brown-dark: $_brown-dark, -brown: $_brown, -brown-light: $_brown-l
   }
 }
 main{
-  background-image: url(../img/bg.png);
-  background-size: cover;
+  background: url(../img/bg.png) center bottom fixed;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 .table-striped{
   tbody tr:nth-of-type(odd) {
@@ -227,9 +241,22 @@ table.table-brown{
 .custom-control-input:focus~.custom-control-label::before,.btn.focus, .btn:focus {
   box-shadow: 0 0 0 0.2rem $_brown-button-active;
 }
-.custom-select:focus {
+.custom-select:focus,.form-control:focus,input[type="text"]:focus {
   border-color: $_brown;
   box-shadow: 0 0 0 0.2rem $_brown-button-active;
+}
+input[type="text"]:focus{
+  border:1px solid $_brown;
+}
+.form-control-sm{
+  height: calc(1.8125rem + 1px);
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .5rem;
+  font-size: .875rem;
+}
+.custom-select-sm{
+  height: calc(1.8125rem + 1px);
 }
 .all_footer{
   a:focus{

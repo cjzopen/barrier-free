@@ -6,6 +6,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="icon" href="dist/img/lci-logo-2.png" type="image/png">
+  <link rel="icon" href="dist/img/lci-logo-2.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="dist/css/datatables.bs4.min.css" />
   <link rel="stylesheet" href="dist/css/datepicker.css" />
@@ -18,13 +20,13 @@
   <header class="all_header">
     <div class="container">
       <div class="row align-items-center justify-content-lg-between header_top">
-        <div class="flex-shrink-0 px-3 py-1 d-lg-none"><a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-bars"></i></a></div>
+        <div class="flex-shrink-0 px-3 py-1 d-lg-none"><a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-bars color-brown"></i></a></div>
         <div class="flex-shrink-0 flex-fill text-center text-lg-left px-3 py-1">
+          <a title="快速鍵h-上方功能連結區" href="#top-area" accesskey="h" id="top-area" class="d-none d-lg-inline color-brown">:::</a>
           <img src="dist/img/lci-logo.svg" alt="議事暨公報管理系統" class="img-fluid all_header_logo">
         </div>
         <div class="px-3 py-1 d-none d-lg-block">
-          <a title="快速鍵h-上方功能連結區" href="#top-area" accesskey="h" id="top-area">:::</a>
-          <small>本網站僅提供89卷50期後之資料，89卷50期以前請至國會圖書館進行查詢</small>
+          <small>本網站僅提供<span>89卷50期</span>後之資料，<span>89卷50期</span>以前請至國會圖書館進行查詢</small>
         </div>
       </div>
     </div>
@@ -32,7 +34,7 @@
       <nav id="nav" aria-label="主選單">
         <ul class="row justify-content-center mb-0">
           <li id="nav_inner_toggle_button" class="align-items-center px-3">
-            <a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-times"></i></a>
+            <a href="#" class="nav-toggle-button" aria-label="主選單收合開關"><i class="fas fa-times color-white"></i></a>
           </li>
           <li class="position-relative" data-slidedown role="presentation" aria-haspopup="true">
             <a class="px-3 px-lg-4 py-3 d-block slidedown-title" data-toggle="slidedown" href="#">公報類</a>
@@ -78,16 +80,16 @@
   </header>
   <main>
     <div aria-label="breadcrumb">
-      <ol class="breadcrumb container mb-0">
+      <ol class="breadcrumb container mb-0 py-2">
         <li class="breadcrumb-item"><i class="fas fa-home" aria-hidden="true"></i> Home</li>
         <li class="breadcrumb-item active" aria-current="page">公報</li>
       </ol>
     </div>
-    <section class="container bg-white pb-5">
-      <a href="#main-content" id="main-content" accesskey="c" title="中間主要內容區，此區塊呈現網頁的主要內容">:::</a>
+    <section class="container bg-white pb-3">
       <div>
-        <div class="btn btn-brown btn-brown--active my-2 mr-2">公報檢索</div>
-        <a class="btn btn-brown my-2 mr-2" href="">公報查閱</a>
+        <a href="#main-content" class="color-brown" id="main-content" accesskey="c" title="中間主要內容區，此區塊呈現網頁的主要內容">:::</a>
+        <a class="btn btn-sm btn-brown btn-brown--active mr-1">公報檢索</a>
+        <a class="btn btn-sm btn-brown mr-1" href="#">公報查閱</a>
       </div>
       <form>
         <div class="d-sm-table">
@@ -96,10 +98,10 @@
               <label class="mb-0" for="">全文檢索關鍵字：</label>
             </div>
             <div class="d-sm-table-cell">
-              <input class="form-control d-inline-block w-auto" type="text">
-              <input type="button" class="btn btn-brown my-2 mr-2" value="查詢">
-              <input type="button" class="btn btn-brown-light my-2 mr-2" value="議案進度查詢">
-              <input type="button" class="btn btn-brown-light my-2 mr-2 summary" value="進階查詢" data-slide="advanced">
+              <input class="form-control form-control-sm d-inline-block w-auto align-middle mr-1" type="text">
+              <input type="button" class="btn btn-sm btn-brown my-2 mr-1" value="查詢">
+              <input type="button" class="btn btn-sm btn-brown-light my-2 mr-1" value="議案進度查詢">
+              <input type="button" class="btn btn-sm btn-brown-light my-2 mr-1 summary" value="進階查詢" data-slide="advanced">
             </div>
           </div>
           <div class="d-sm-table-row">
@@ -107,7 +109,7 @@
               <span>熱門關鍵字：</span>
             </div>
             <div class="d-sm-table-cell">
-              <ol class="d-flex flex-wrap pl-0 keyword_list">
+              <ol class="d-flex flex-wrap pl-0 mb-2 keyword_list">
                 <li class="text-nowrap"><a href="">經濟委員會</a></li>
                 <li class="text-nowrap"><a href="">經濟委員會</a></li>
                 <li class="text-nowrap"><a href="">經濟委員會</a></li>
@@ -124,7 +126,7 @@
                 <label class="mb-0" for="">會議日期：</label>
               </div>
               <div class="d-sm-table-cell">
-                <input type="text" id="advanced_meeting_date_start" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期"> ~ <input type="text" id="advanced_meeting_date_end" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期">
+                <input type="text" id="advanced_meeting_date_start" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期" class="form-control form-control-sm d-inline-block w-auto"> ~ <input type="text" id="advanced_meeting_date_end" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期" class="form-control form-control-sm d-inline-block w-auto">
               </div>
             </div>
             <div class="d-sm-table-row">
@@ -173,7 +175,7 @@
                 <label class="mt-3 mb-0" for="">卷-期：</label>
               </div>
               <div class="d-sm-table-cell">
-                <input type="text" maxlength="4" size="4">卷 <input type="text" maxlength="4" size="4">期~<input type="text" maxlength="4" size="4">卷 <input type="text" maxlength="4" size="4">期
+                <input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto">卷 <input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto">期~<input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto">卷 <input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto">期
               </div>
             </div>
             <div class="d-sm-table-row">
@@ -181,7 +183,7 @@
                 <label class="mt-3 mb-0" for="">出版期數(四碼)：</label>
               </div>
               <div class="d-sm-table-cell">
-                <input type="text" maxlength="4" size="4"> ~ <input type="text" maxlength="4" size="4">
+                <input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto"> ~ <input type="text" maxlength="4" size="4" class="form-control form-control-sm d-inline-block w-auto">
               </div>
             </div>
             <div class="d-sm-table-row">
@@ -189,7 +191,7 @@
                 <label class="mt-3 mb-0" for="">出版日期：</label>
               </div>
               <div class="d-sm-table-cell">
-                <input type="text" id="advanced_publish_date_start" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期"> ~ <input type="text" id="advanced_publish_date_end" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期">
+                <input type="text" id="advanced_publish_date_start" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期" class="form-control form-control-sm d-inline-block w-auto"> ~ <input type="text" id="advanced_publish_date_end" placeholder="yyy/mm/dd" title="可使用鍵盤方向鍵選取日期" class="form-control form-control-sm d-inline-block w-auto">
               </div>
             </div>
             <div class="d-sm-table-row">
@@ -216,7 +218,7 @@
                 <label class="mt-3 mb-0" for="progress">處理進度：</label>
               </div>
               <div class="d-sm-table-cell">
-                <select multiple class="form-control" id="progress">
+                <select multiple class="form-control form-control-sm" id="progress">
                   <option value="繼續質詢">繼續質詢</option>
                   <option>2</option>
                   <option>3</option>
@@ -269,9 +271,9 @@
 <!--       <div>
         <label for="">全文檢索關鍵字：</label>
         <input type="text">
-        <input type="button" class="btn btn-brown my-2 mr-2" value="查詢">
-        <input type="button" class="btn btn-brown-light my-2 mr-2" value="議案進度查詢">
-        <input type="button" class="btn btn-brown-light my-2 mr-2" value="進階查詢">
+        <input type="button" class="btn btn-sm btn-brown my-2 mr-2" value="查詢">
+        <input type="button" class="btn btn-sm btn-brown-light my-2 mr-2" value="議案進度查詢">
+        <input type="button" class="btn btn-sm btn-brown-light my-2 mr-2" value="進階查詢">
       </div>
       <div class="d-flex pl-3">
         <span>熱門關鍵字：</span>
@@ -281,7 +283,7 @@
           <li class="text-nowrap"><a href="">經濟委員會</a></li>
         </ol>
       </div> -->
-      <table class="table table-striped table-brown" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
+      <table class="table table-sm table-striped table-brown" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
         <thead>
           <tr role="row" class="bg-brown">
             <th scope="col"></th>
@@ -295,220 +297,220 @@
         </thead>
         <tbody>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">1</a></td>
-            <td class="d-none d-lg-table-cell">108</td>
-            <td class="d-none d-lg-table-cell">02(4645)</td>
-            <td class="d-none d-lg-table-cell">下</td>
-            <td>立法院第108卷第02期 (4645)公報 下 冊</td>
-            <td>108/01/17</td>
-            <td><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a></td>
+            <td scope="row" class="align-middle">1</td>
+            <td class="align-middle d-none d-lg-table-cell">108</td>
+            <td class="align-middle d-none d-lg-table-cell">02(4645)</td>
+            <td class="align-middle d-none d-lg-table-cell">下</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">立法院第108卷第02期 (4645)公報 下 冊<br>立法院第108卷第02期 (4645)公報 下 冊</a></td>
+            <td class="align-middle">108/01/17</td>
+            <td class="align-middle"><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a></td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">2</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">2</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">3</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">3</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">4</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">4</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">5</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">5</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">6</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">6</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">7</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">7</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">8</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">8</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">9</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">9</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">10</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">10</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">11</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">11</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">12</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">12</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">13</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">13</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">14</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">14</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">15</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">15</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">16</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">16</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">17</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">17</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">18</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">18</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">19</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">19</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">20</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">20</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">21</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">21</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
           <tr role="row">
-            <td scope="row"><a href="#" title="此列詳細資料" class="color-brown">22</a></td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td class="d-none d-lg-table-cell">####</td>
-            <td>####</td>
-            <td>####</td>
-            <td>####</td>
+            <td scope="row" class="align-middle">22</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle d-none d-lg-table-cell">####</td>
+            <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+            <td class="align-middle">####</td>
+            <td class="align-middle">####</td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
   <footer class="bg-brown-dark color-white py-3 all_footer">
-    <a href="#footer-area" id="footer-area" accesskey="z" title="下方選單連結區，此區塊列有[資訊安全政策]、[隱私權政策]等連結">:::</a>
     <div class="container">
-      <div class="d-lg-flex justify-content-lg-between">
-        <div class="d-flex mb-3">
+      <div class="clearfix">
+        <div class="d-flex mb-3 mb-lg-0 float-lg-left">
+          <a href="#footer-area" class="color-white" id="footer-area" accesskey="z" title="快速鍵z - 下方選單連結區，此區塊列有[資訊安全政策]、[隱私權政策]等連結">:::</a>
           <img class="img-fluid mr-2" src="dist/img/lci-logo-2.svg" alt="立法院logo">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled mb-0">
             <li>立法院本部　地址：10051 台北市中正區中山南路1號 / 電話總機：(02)23585858</li>
             <li>立法院中部辦公室　地址：41341 台中市霧峰區中正路734號</li>
             <li>Copyright &copy; 2012 立法院版權所有</li>
           </ul>
         </div>
-        <div>
+        <div class="float-lg-right">
           <div>
             <a href="#"><img class="img-fluid" src="" alt="無障礙標章"></a>
             <label for="">瀏覽人次：<span id="visit-times">3452455642</span></label>
