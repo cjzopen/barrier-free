@@ -9,10 +9,11 @@
   <link rel="icon" href="dist/img/lci-logo-2.png" type="image/png">
   <link rel="icon" href="dist/img/lci-logo-2.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="dist/css/datatables.bs4.min.css" />
   <link rel="stylesheet" href="dist/css/datepicker.css" />
   <link rel="stylesheet" href="dist/css/style.css" />
 </head>
-<body class="no-js">
+<body>
 <noscript><div class="container h4 text-danger">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</div></noscript>
 <div id="all">
   <a class="w-100 text-center skip-link" href="#main-content"><span>跳到主要內容區塊</span></a>
@@ -23,11 +24,10 @@
         <div class="flex-fill text-center text-lg-left px-3 py-1">
           <img src="dist/img/lci-logo.svg" alt="議事暨公報管理系統" class="img-fluid all_header_logo">
         </div>
-        <div class="px-3 py-1 text-center text-lg-right flex-fill d-none d-lg-block">
+        <div class="px-3 py-1 text-center text-lg-right flex-fill">
           <a title="快速鍵h-上方功能連結區" href="#top-area" accesskey="h" id="top-area" class="d-none d-lg-inline color-brown">:::</a>
-          <a class="color-brown pl-3 h4" href="" aria-label="網站導覽"><span class="d-none d-lg-inline h6"><i class="fas fa-caret-right" aria-hidden="hidden"></i> 網站導覽</span></a>
-          <a class="color-brown pl-3 h4" href="" aria-label="PDF Reader"><span class="d-none d-lg-inline h6"><i class="fas fa-caret-right" aria-hidden="hidden"></i> PDF Reader</span></a>
-          <div>
+          <a class="color-brown p-3 h4" href="" aria-label="網站導覽"><i class="fas fa-sitemap d-lg-none "></i><span class="d-none d-lg-inline h6">網站導覽</span></a>
+          <div class="d-none d-lg-block">
             <small>本網站僅提供<span>89卷50期</span>後之資料，<span>89卷50期</span>以前請至國會圖書館進行查詢</small>
           </div>
         </div>
@@ -89,13 +89,13 @@
       </ol>
     </div>
     <section class="container bg-white pb-3">
-      <aside>
+      <div>
         <a href="#main-content" class="color-brown" id="main-content" accesskey="c" title="中間主要內容區，此區塊呈現網頁的主要內容">:::</a>
         <a class="btn btn-sm btn-brown btn-brown--active mr-1">公報檢索</a>
         <a class="btn btn-sm btn-brown mr-1" href="#">公報查閱</a>
-      </aside>
-      <div class="position-relative overflow-auto sticky-parent" style="max-height:520px">
-        <form class="sticky-top bg-white">
+      </div>
+      <div class="position-relative">
+        <form class="sticky-top">
           <div class="d-sm-table">
             <div class="d-sm-table-row">
               <div class="d-sm-table-cell text-sm-right text-nowrap">
@@ -272,221 +272,219 @@
             </div>
           </div>
         </form>
-        <div class="table-responsive">
-          <table class="table table-sm table-striped table-brown responsive" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
-            <thead>
-              <tr role="row" class="bg-brown">
-                <th scope="col"></th>
-                <th scope="col" class="d-none d-lg-table-cell">卷</th>
-                <th scope="col" class="d-none d-lg-table-cell">期(出版總號)</th>
-                <th scope="col" class="d-none d-lg-table-cell">冊別</th>
-                <th scope="col">卷、期、冊別</th>
-                <th scope="col">出版日期</th>
-                <th scope="col">PDF檔案連結</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr role="row">
-                <td scope="row" class="align-middle">1</td>
-                <td class="align-middle d-none d-lg-table-cell">108</td>
-                <td class="align-middle d-none d-lg-table-cell">02(4645)</td>
-                <td class="align-middle d-none d-lg-table-cell">下</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">立法院第108卷第02期 (4645)公報 下 冊<br>立法院第108卷第02期 (4645)公報 下 冊</a></td>
-                <td class="align-middle">108/01/17</td>
-                <td class="align-middle"><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a></td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">2</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">3</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">4</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">5</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">6</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">7</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">8</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">9</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">10</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">11</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">12</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">13</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">14</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">15</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">16</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">17</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">18</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">19</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">20</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">21</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-              <tr role="row">
-                <td scope="row" class="align-middle">22</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle d-none d-lg-table-cell">####</td>
-                <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
-                <td class="align-middle">####</td>
-                <td class="align-middle">####</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table class="table table-sm table-striped table-brown responsive" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
+          <thead>
+            <tr role="row" class="bg-brown">
+              <th scope="col"></th>
+              <th scope="col" class="d-none d-lg-table-cell">卷</th>
+              <th scope="col" class="d-none d-lg-table-cell">期(出版總號)</th>
+              <th scope="col" class="d-none d-lg-table-cell">冊別</th>
+              <th scope="col">卷、期、冊別</th>
+              <th scope="col">出版日期</th>
+              <th scope="col">PDF檔案連結</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr role="row">
+              <td scope="row" class="align-middle">1</td>
+              <td class="align-middle d-none d-lg-table-cell">108</td>
+              <td class="align-middle d-none d-lg-table-cell">02(4645)</td>
+              <td class="align-middle d-none d-lg-table-cell">下</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">立法院第108卷第02期 (4645)公報 下 冊<br>立法院第108卷第02期 (4645)公報 下 冊</a></td>
+              <td class="align-middle">108/01/17</td>
+              <td class="align-middle"><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a></td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">2</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">3</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">4</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">5</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">6</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">7</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">8</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">9</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">10</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">11</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">12</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">13</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">14</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">15</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">16</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">17</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">18</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">19</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">20</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">21</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+            <tr role="row">
+              <td scope="row" class="align-middle">22</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle d-none d-lg-table-cell">####</td>
+              <td class="align-middle"><a href="#" title="詳細資料" class="color-brown">####</a></td>
+              <td class="align-middle">####</td>
+              <td class="align-middle">####</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
@@ -520,6 +518,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="dist/jquery.datatables.min.js"></script>
+<script src="dist/datatables.bootstrap4.min.js"></script>
 <script src="dist/datepicker.js"></script>
 <script src="dist/bundle.js"></script>
 <script>
@@ -550,6 +550,37 @@ $(function() {
     autoClose: true
   }).data('datepicker');
 });
+(function(){
+  var dataTableSetting = {
+    "searching":false,
+    "ordering":false,
+    "autoWidth": false,
+    "lengthMenu": [ 10, 20, 30, 50 ],
+    "pagingType": "full_numbers",
+    "language": {
+      "paginate": {
+        "first": "<i class=\"fas fa-angle-double-left\"></i>",
+        "last":"<i class=\"fas fa-angle-double-right\"></i>",
+        // "previous":"<strong><</strong>",
+        // "next":"<strong>></strong>",
+        "previous":"<i class=\"fas fa-chevron-left\"></i>",
+        "next":"<i class=\"fas fa-chevron-right\"></i>",
+      },
+      aria:{
+        paginate: {
+          first:"第一頁",
+          previous:"上一頁",
+          next:"下一頁",
+          last:"最後一頁"
+        }
+      },
+      "lengthMenu":"每頁顯示 _MENU_ 筆",
+      "info":"第 _START_ 到 _END_ 筆，共 _TOTAL_ 筆"
+    }
+  }
+  $("#mytable").DataTable(dataTableSetting);
+  $("table.responsive").parent().addClass('table-responsive');
+})();
 </script>
 </body>
 </html>

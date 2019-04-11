@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>議事暨公報管理系統</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="icon" href="dist/img/lci-logo-2.png" type="image/png">
+  <link rel="icon" href="dist/img/lci-logo-2.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="dist/css/datatables.bs4.min.css" />
+  <link rel="stylesheet" href="dist/css/datepicker.css" />
+  <link rel="stylesheet" href="dist/css/style.css" />
+</head>
+<body>
+<noscript><div class="container h4 text-danger">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</div></noscript>
+<div id="all">
+  <a class="w-100 text-center skip-link" href="#main-content"><span>跳到主要內容區塊</span></a>
+  <main>
+    <section class="container bg-white pb-3">
+      <h1>彈跳視窗</h1>
+      <div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-sm btn-brown my-2 mr-1" data-toggle="modal" data-target="#modal-example">Modal Demo</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-example" tabindex="-1" role="dialog" aria-labelledby="example-title" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="example-title">原始檔案連結</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="fas fa-times color-brown"></span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table class="table table-striped table-brown" summary="表格的描述" aria-label="表格的描述" aria-describedby="表格的描述">
+                  <thead>
+                    <tr role="row" class="bg-brown">
+                      <th scope="col" class="d-none d-lg-table-cell">檔案類別</th>
+                      <th scope="col">檔案名稱</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr role="row">
+                      <td scope="row" class="align-middle d-none d-lg-table-cell">單頁PDF檔</td>
+                      <td class="align-middle"><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a> 單頁PDF檔</td>
+                    </tr>
+                    <tr role="row">
+                      <td scope="row" class="align-middle d-none d-lg-table-cell">完整PDF檔</td>
+                      <td class="align-middle"><a href="#" class="border border-danger rounded text-danger px-2" title="pdf檔檢閱">PDF</a> 完整PDF檔</td>
+                    </tr>
+                    <tr role="row">
+                      <td scope="row" class="align-middle d-none d-lg-table-cell">WORD檔</td>
+                      <td class="align-middle"><a href="#" class="border border-primary rounded text-primary px-1" title="word檔檢閱">WORD</a> 開啟WORD檔</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                沒有要按鈕就把 modal-footer 刪掉
+                <button type="button" class="btn btn-sm btn-brown-light my-2 mr-1" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-sm btn-brown my-2 mr-1">DEMO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>

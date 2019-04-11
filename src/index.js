@@ -3,6 +3,7 @@ import * as theFn from './function.js';
 // import $ from "jquery";
 // import './test.scss';
 
+$('body').removeClass('no-js');
 
 const numElement = document.querySelector('#visit-times');
 var j = theFn.addCommaEvery3Digits(numElement.innerHTML);
@@ -85,6 +86,27 @@ $(document).on('click','.summary',function(e){
   }
   detail.slideToggle(200);
 });
+var IEVer = theFn.detectIE();
+if(IEVer !== false && IEVer < 12){
+  $('body').addClass('is-ie');
+  var STICKY = $('.sticky-top');
+  STICKY.addClass('position-absolute w-100');
+  STICKY.each(function( index ) {
+    let $this = $(this);
+    // $this.next().css('padding-top',$this.outerHeight());
+    $this.parent().before($this.html());
+    $this.remove();
+    // let offset = 
+    // $this.closest('.sticky-parent').scroll(function() {
+    //   $this.position().top
+    //   if ($(this).scrollTop() > offset) {
+    //     $('.back-to-top').fadeIn(400);
+    //   } else {
+    //     $('.back-to-top').fadeOut(400);
+    //   }
+    // });
+  });
+}
 // function tablePagination(element){
 //   var theTable = $(element);
 //   var row = theTable.find('tbody tr');
