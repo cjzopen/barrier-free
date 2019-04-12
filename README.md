@@ -61,6 +61,19 @@ example：
     </div>
 ```
 
+### table-responsive
+
+* table自己需加上class: responsive(最小寬1024px)，若在加上 responsive-xl(1200px) responsive-lg(992px) responsive-md(768px) responsive-sm(576px) 可改變最小寬。
+* 父層class需加上 table-responsive。
+
+example：
+```html
+    <div class="table-responsive">
+        <table class="table table-sm table-striped table-brown responsive" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
+        </table>
+    </div>
+```
+
 ### 瀏覽人次
 
 瀏覽人次加上 #visit-times，會每三個位數加上","。
