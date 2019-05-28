@@ -86,6 +86,14 @@ $(document).on('click','.summary',function(e){
   }
   detail.slideToggle(200);
 });
+
+$(document).on('click','.keyword_list_item',function(e){
+  e.preventDefault();
+  let _this = $(this);
+  let keyword = _this.text();
+  $('#main-search').val(keyword).focus();
+});
+
 var IEVer = theFn.detectIE();
 if(IEVer !== false && IEVer < 12){
   $('body').addClass('is-ie');

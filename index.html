@@ -94,15 +94,15 @@
         <a class="btn btn-sm btn-brown mr-1" href="#">公報查閱</a>
       </aside>
       <a href="#main-content" class="color-brown" id="main-content" accesskey="c" title="中間主要內容區，此區塊呈現網頁的主要內容">:::</a>
-      <div class="position-relative overflow-auto sticky-parent" style="max-height:520px">
-        <form class="sticky-top bg-white">
+      <form class="position-relative overflow-auto sticky-parent" style="max-height:520px">
+        <div class="sticky-top bg-white">
           <div class="d-sm-table">
             <div class="d-sm-table-row">
               <div class="d-sm-table-cell text-sm-right text-nowrap">
                 <label class="mb-0" for="">全文檢索關鍵字：</label>
               </div>
               <div class="d-sm-table-cell">
-                <input class="form-control form-control-sm d-inline-block w-auto align-middle mr-1" type="text">
+                <input class="form-control form-control-sm d-inline-block w-auto align-middle mr-1" type="text" id="main-search">
                 <input type="button" class="btn btn-sm btn-brown my-2 mr-1" value="查詢">
                 <input type="button" class="btn btn-sm btn-brown-light my-2 mr-1" value="議案進度查詢">
                 <input type="button" class="btn btn-sm btn-brown-light my-2 mr-1 summary" value="進階查詢" data-slide="advanced">
@@ -114,15 +114,17 @@
               </div>
               <div class="d-sm-table-cell">
                 <ol class="d-flex flex-wrap pl-0 mb-2 keyword_list">
-                  <li class="text-nowrap"><a href="">經濟委員會</a></li>
-                  <li class="text-nowrap"><a href="">經濟委員會</a></li>
-                  <li class="text-nowrap"><a href="">經濟委員會</a></li>
-                  <li class="text-nowrap"><a href="">經濟委員會</a></li>
-                  <li class="text-nowrap"><a href="">經濟委員會</a></li>
+                  <li class="text-nowrap"><a class="keyword_list_item" href="#">經濟委員會</a></li>
+                  <li class="text-nowrap"><a class="keyword_list_item" href="#">經濟委員會</a></li>
+                  <li class="text-nowrap"><a class="keyword_list_item" href="#">經濟委員會</a></li>
+                  <li class="text-nowrap"><a class="keyword_list_item" href="#">經濟委員會</a></li>
+                  <li class="text-nowrap"><a class="keyword_list_item" href="#">經濟委員會</a></li>
                 </ol>
               </div>
             </div>
           </div>
+        </div>
+        <div>
           <div class="border-top border-bottom mb-3 py-3 detail" data-slide="advanced">
             <div class="d-sm-table">
               <div class="d-sm-table-row">
@@ -271,7 +273,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </div>
         <div class="table-responsive">
           <table class="table table-sm table-striped table-brown responsive" id="mytable" summary="最新出版公報資訊" aria-label="最新出版公報資訊" aria-describedby="最新出版公報資訊">
             <thead>
@@ -487,7 +489,7 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </form>
     </section>
   </main>
   <footer class="bg-brown-dark color-white py-3 all_footer">
