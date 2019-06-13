@@ -19,8 +19,15 @@ $(document).on('click','.slidedown-title',function(e){
   if($(this).attr('href') == '#'){
     e.preventDefault();
   }
+  // let _this = $(this);
+  // // alert('fired');
+  // _this.addClass('slidedown--active');
+  // _this.closest('[data-slidedown]').siblings().find('.slidedown-title').removeClass('slidedown--active');
+  // $(document).on('blur','[data-slidedown]:last .slidedown-item:last',function(){
+  //   _this.removeClass('slidedown--active');
+  // });
 });
-$(document).on('focus','.slidedown-title',function(e){
+$(document).on('focus click','.slidedown-title',function(e){
   let _this = $(this);
   _this.addClass('slidedown--active');
   _this.closest('[data-slidedown]').siblings().find('.slidedown-title').removeClass('slidedown--active');
